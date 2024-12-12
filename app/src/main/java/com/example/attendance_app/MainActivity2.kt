@@ -1,8 +1,10 @@
 package com.example.attendance_app
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.CalendarView
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -18,7 +20,13 @@ class MainActivity2 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main2)
+
+        val btn:Button=findViewById(R.id.button)
+
+        btn.setOnClickListener {
+            Toast.makeText(this,"Event Saved",Toast.LENGTH_SHORT).show()
+        }
 
         calendarView = findViewById(R.id.calendarView)
         editText = findViewById(R.id.editText)

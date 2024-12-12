@@ -9,8 +9,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="870dp"
-        android:layout_height="581dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:cardBackgroundColor="@android:color/transparent"
         app:cardElevation="15dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
@@ -30,10 +30,10 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="420dp"
-        android:layout_height="201dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="96dp"
+        android:layout_width="133dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
@@ -42,12 +42,12 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="252dp"
-        android:layout_height="113dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="148dp"
-        android:onClick="buttonSaveEvent"
+        android:layout_width="177dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/circ_button"
+        android:onClick="buttonSaveEvent"
         android:text="Save Event"
         app:layout_constraintStart_toEndOf="@+id/editText"
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
