@@ -24,9 +24,8 @@ class MainActivity2 : AppCompatActivity() {
 
         val btn:Button=findViewById(R.id.button)
 
-        btn.setOnClickListener {
-            Toast.makeText(this,"Event Saved",Toast.LENGTH_SHORT).show()
-        }
+
+
 
         calendarView = findViewById(R.id.calendarView)
         editText = findViewById(R.id.editText)
@@ -34,6 +33,7 @@ class MainActivity2 : AppCompatActivity() {
         calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
             stringDateSelected = "$year${month + 1}$dayOfMonth"
             calendarClicked()
+
         }
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Calendar")
@@ -57,6 +57,7 @@ class MainActivity2 : AppCompatActivity() {
     fun buttonSaveEvent(view: View?) {
         stringDateSelected?.let { date ->
             databaseReference.child(date).setValue(editText.text.toString())
+            Toast.makeText(this,"Event Saved",Toast.LENGTH_SHORT).show()
         }
     }
 }

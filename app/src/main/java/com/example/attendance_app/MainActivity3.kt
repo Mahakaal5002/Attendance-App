@@ -15,9 +15,14 @@ class MainActivity3 : AppCompatActivity() {
         setContentView(R.layout.activity_main3)
 
         val btn:Button=findViewById(R.id.attendanceButton)
+        val btn2:Button=findViewById(R.id.timetableButton)
 
         btn.setOnClickListener {
-            startActivity(Intent(this,MainActivity2::class.java))
+            startActivity(Intent(this,MainActivity4::class.java))
+        }
+
+        btn2.setOnClickListener {
+            startActivity(Intent(this,MainActivity6::class.java))
         }
     }
 }
